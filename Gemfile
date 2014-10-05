@@ -17,6 +17,8 @@ gem 'therubyracer', '0.12.1', platforms: :ruby
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.7'
 
+# Slim templates generator for Rails 3 and 4
+gem 'slim-rails', '2.1.5'
 # bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
 gem 'bootstrap-sass', '3.2.0.2'
 # Use jquery as the JavaScript library
