@@ -1,17 +1,21 @@
 # == Route Map
 #
-#  Prefix Verb URI Pattern        Controller#Action
-#    root GET  /                  static_pages#home
-#    help GET  /help(.:format)    static_pages#help
-#   about GET  /about(.:format)   static_pages#about
-# contact GET  /contact(.:format) static_pages#contact
+#      Prefix Verb   URI Pattern             Controller#Action
+#    sessions POST   /sessions(.:format)     sessions#create
+# new_session GET    /sessions/new(.:format) sessions#new
+#     session DELETE /sessions/:id(.:format) sessions#destroy
+#        root GET    /                       static_pages#home
+#        help GET    /help(.:format)         static_pages#help
+#       about GET    /about(.:format)        static_pages#about
+#     contact GET    /contact(.:format)      static_pages#contact
 #
 
 Rails.application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
-  match '/help',    to: "static_pages#help",    via: 'get'
-  match '/about',   to: "static_pages#about",   via: 'get'
-  match '/contact', to: "static_pages#contact", via: 'get'
+  match '/help',    to: 'static_pages#help',    via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

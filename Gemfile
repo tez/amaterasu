@@ -13,6 +13,8 @@ gem 'uglifier', '2.5.3'
 gem 'coffee-rails', '4.0.1'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', '0.12.1', platforms: :ruby
+# A simple and Rubyish view helper for Rails 3 and Rails 4. Keep your helpers and views Object-Oriented!
+gem 'active_decorator', '0.3.4'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.7'
